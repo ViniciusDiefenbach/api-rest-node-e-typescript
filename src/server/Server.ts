@@ -1,14 +1,9 @@
 import express from 'express';
+import { router } from './routes';
 
 const server = express();
-
-interface Teste {
-
-}
-
-server.get('/', (req, res) => {
-	return res.send('Bom dia, senhor');
-});
+server.use(express.json());
+server.use(router);
 
 export { server };
 
