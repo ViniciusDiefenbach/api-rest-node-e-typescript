@@ -1,5 +1,4 @@
 import { Router } from 'express';
-import { StatusCodes } from 'http-status-codes';
 const router = Router();
 
 router.get('/', (req, res) => {
@@ -7,7 +6,7 @@ router.get('/', (req, res) => {
 });
 
 router.post('/teste', (req, res) => {
-  return res.status(StatusCodes.ACCEPTED).json(req.body);
+  return res.json(req.body);
 });
 
 export { router };
